@@ -1,0 +1,52 @@
+require './libs/encryption.rb'
+require './libs/signing.rb'
+
+default_platform(:ios)
+
+platform :ios do
+
+  lane :test do
+    run_tests(scheme: 'iOSProject')
+  end
+
+  lane :staging do
+    build("../signing/staging", "Staging" ,"ad-hoc")
+    staging_upload
+  end
+
+  lane :release do
+    build("../signing/release", "Release" ,"app-store")
+    upload_to_testflight(skip_submission: true)
+  end
+
+  lane :encrypt do
+    key = prompt(
+      text: "Encryption key: ",
+      secure_text: true
+    )
+    encrypt("../signing/staging", key)
+    encrypt("../signing/release", key)
+  end
+
+  def build(folder, configuration, export_method)
+    create_signing_configuration(folder, ENV['FILE_DECRYPTION_KEY'])
+
+    increment_build_number(build_number: number_of_commits(all: true))
+
+    build_ios_app(
+      scheme: 'iOSProject',
+      export_method: export_method,
+      configuration: configuration
+    )
+
+    clear_signing_configuration(folder)
+  end
+
+  def staging_upload()
+    hockey(
+      api_token: ENV['HOCKEYAPP_API_TOKEN'],
+      ipa: lane_context[SharedValues::IPA_OUTPUT_PATH],
+      dsym: lane_context[SharedValues::DSYM_OUTPUT_PATH]
+    )
+  end
+end

@@ -1,0 +1,7 @@
+#include "SharedSigning.xcconfig"
+
+// Packing
+PRODUCT_BUNDLE_IDENTIFIER = com.example.iosproject.debug
+
+// Signing
+CODE_SIGN_STYLE = Automatic

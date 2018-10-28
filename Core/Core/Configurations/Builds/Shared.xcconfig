@@ -1,0 +1,27 @@
+// Deployment
+INSTALL_PATH = $(LOCAL_LIBRARY_DIR)/Frameworks
+SKIP_INSTALL = YES
+APPLICATION_EXTENSION_API_ONLY = YES;
+
+// Linking
+DYLIB_COMPATIBILITY_VERSION = 1
+DYLIB_CURRENT_VERSION = 1
+DYLIB_INSTALL_NAME_BASE = @rpath
+LD_RUNPATH_SEARCH_PATHS = $(inherited) @executable_path/Frameworks @loader_path/Frameworks $(PROJECT_DIR)/../Carthage/Build/iOS
+
+// Search Paths
+FRAMEWORK_SEARCH_PATHS = $(inherited) $(PROJECT_DIR)/../Carthage/Build/iOS
+
+// Packing
+DEFINES_MODULE = YES
+INFOPLIST_FILE = Core/Configurations/Info.plist
+PRODUCT_BUNDLE_IDENTIFIER = com.example.iosproject.Core
+PRODUCT_NAME = $(TARGET_NAME:c99extidentifier)
+
+// Signing
+CODE_SIGN_IDENTITY =
+CODE_SIGN_STYLE = Automatic
+
+// User-Defined
+SWIFT_VERSION = 4.2
+TARGETED_DEVICE_FAMILY = 1,2

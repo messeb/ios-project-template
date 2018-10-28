@@ -1,0 +1,16 @@
+#include "Shared.xcconfig"
+#include "Signing/ReleaseSigning.xcconfig"
+
+// Build Options
+DEBUG_INFORMATION_FORMAT = dwarf-with-dsym
+VALIDATE_PRODUCT = YES
+
+// Apple LLVM 9.0 - Preprocessing
+ENABLE_NS_ASSERTIONS = NO
+
+// Swift Compiler - Code Generation
+SWIFT_OPTIMIZATION_LEVEL = -Owholemodule
+SWIFT_COMPILATION_MODE = wholemodule
+
+// User-Defined
+MTL_ENABLE_DEBUG_INFO = NO

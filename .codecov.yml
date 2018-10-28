@@ -1,0 +1,23 @@
+codecov:
+  branch: master
+
+coverage:
+  status:
+    project:
+      default: off
+      ios:
+        flags: ios
+      core:
+        flags: core
+
+flags:
+  ios:
+    paths:
+      - iOSProject/iOSProject/
+  core:
+    paths:
+      - Core/Core/
+
+ignore:
+  - "iOSProjectTests/.*"
+  - "Core/CoreTests/.*"

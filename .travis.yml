@@ -1,0 +1,29 @@
+language: objective-c
+osx_image: xcode10
+
+cache:
+  bundler: true
+  directories:
+    - $HOME/.rvm/
+    - $HOME/Library/Caches/Homebrew
+    - $TRAVIS_BUILD_DIR/Carthage
+
+install: make setup
+
+stages:
+  - build
+
+jobs:
+  include:
+    - name: Pull Request
+      if: type = pull_request
+      stage: build
+      script: make pull_request
+    - name: Staging
+      if: branch = master AND NOT (type = pull_request)
+      stage: build
+      script: make staging
+    - name: Release
+      if: tag IS present
+      stage: build
+      script: make release

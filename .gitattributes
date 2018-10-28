@@ -1,0 +1,2 @@
+# Keeps ours and theirs changes to avoid merge conflicts 
+CHANGELOG.yml merge=union

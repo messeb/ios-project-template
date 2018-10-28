@@ -1,0 +1,21 @@
+// Deployment
+TARGETED_DEVICE_FAMILY = 1,2
+
+// Build Options
+ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = $(inherited)
+
+// Search Paths
+FRAMEWORK_SEARCH_PATHS = $(inherited)
+
+// Linking
+LD_RUNPATH_SEARCH_PATHS = $(inherited) @executable_path/Frameworks
+
+// Packing
+INFOPLIST_FILE = iOSProject/Configurations/Info.plist
+PRODUCT_NAME = $(TARGET_NAME)
+
+// Asset Catalog Compiler - Options
+ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon
+
+// Swift Compiler - Language
+SWIFT_VERSION = 4.2

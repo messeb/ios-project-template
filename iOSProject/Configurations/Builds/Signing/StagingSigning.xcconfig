@@ -1,0 +1,9 @@
+#include "SharedSigning.xcconfig"
+
+// Packing
+PRODUCT_BUNDLE_IDENTIFIER = com.example.iosproject.staging
+
+// Signing
+CODE_SIGN_STYLE = Manual
+CODE_SIGN_IDENTITY = iPhone Distribution: Company (XXXXXXXXXX)
+PROVISIONING_PROFILE_SPECIFIER = iosproject-staging-adhoc
