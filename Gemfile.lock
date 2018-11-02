@@ -210,11 +210,11 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  danger (~> 5.6)
-  fastlane (~> 2.102)
+  danger (~> 5.7.1)
+  fastlane (~> 2.107.0)
   openssl (~> 2.1)
   pry
   travis (~> 1.8)
 
 BUNDLED WITH
-   1.16.4
+   1.17.1
