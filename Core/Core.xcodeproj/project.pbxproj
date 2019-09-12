@@ -204,16 +204,16 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1000;
-				LastUpgradeCheck = 1000;
+				LastUpgradeCheck = 1100;
 				ORGANIZATIONNAME = messeb.com;
 				TargetAttributes = {
 					E0FD11DC21477A5F008C2EF8 = {
 						CreatedOnToolsVersion = 10.0;
-						LastSwiftMigration = 1000;
+						LastSwiftMigration = 1100;
 					};
 					E0FD11E521477A5F008C2EF8 = {
 						CreatedOnToolsVersion = 10.0;
-						LastSwiftMigration = 1000;
+						LastSwiftMigration = 1100;
 					};
 				};
 			};
@@ -223,6 +223,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = E0FD11D321477A5F008C2EF8;
 			productRefGroup = E0FD11DE21477A5F008C2EF8 /* Products */;
@@ -302,7 +303,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Staging;
 		};
@@ -311,6 +312,7 @@
 			baseConfigurationReference = E0FD122F214786AE008C2EF8 /* ReleaseTest.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Staging;
 		};
@@ -336,7 +338,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
@@ -345,6 +347,7 @@
 			baseConfigurationReference = E0FD122F214786AE008C2EF8 /* ReleaseTest.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
@@ -354,6 +357,7 @@
 			buildSettings = {
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_TESTABILITY = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -376,7 +380,7 @@
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -385,6 +389,7 @@
 			baseConfigurationReference = E0FD1229214786AD008C2EF8 /* DebugTest.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};

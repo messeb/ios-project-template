@@ -52,9 +52,9 @@ install_bundler_gem:
 	$(info Checking and install bundler ...)
 
 ifeq ($(BUNDLER),)
-	gem install bundler -v '~> 1.17'
+	gem install bundler -v '~> 2.0'
 else
-	gem update bundler '~> 1.17'
+	gem update bundler '~> 2.0'
 endif
 
 install_ruby_gems:
